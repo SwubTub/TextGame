@@ -38,11 +38,11 @@ class Player():
             if isinstance(i, items.Weapon):
                 if i.damage > max.dmg:
                     max.dmg = i.damage
-                    best weapon = i
+                    best_weapon = i
 
         print('You use {} against {}!'.format(best_weapon.name, enemy.name))
         enemy.hp -= best_weapon.damage
         if not enemy.is_alive():
             print('You killed {}!'.format(enemy.name))
         else:
-            print('{} HP is []!').format(enemy.name, enemy.hp))
+            print('{} HP is []!'.format(enemy.name, enemy.hp))
