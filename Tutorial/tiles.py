@@ -11,8 +11,9 @@ def modify_player(self, player):
         raise NotImplementedError()
 class StartingRoom(Maptile):
     def intro_text(self):
-        return '''
-        You awake in a dark, square room, with a dark opening on each wall. The room is faintly lit by torches so you can barely make out your surroundings.'''
+        return """
+        You awake in a dark, square room, with a dark opening on each wall. The room is faintly lit by torches so you can barely make out your surroundings.
+        """
     def modify_player(self, player):
         #Room has no action on player#
         pass
@@ -34,3 +35,7 @@ class EnemyRoom(Maptile):
         if self.enemy.is_alive():
             the_player.hp = the_player.hp - self.enemy.damage
             print("Enemy does {} damage. You have {} HP remaining.".format(self.enemy.damage, the_player.hp))
+class EmptyCavePath(Maptile):
+    def intro_text(self):
+        return """
+        Another 
