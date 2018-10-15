@@ -1,0 +1,8 @@
+		                        FindSwordRoom	LeaveCaveRoom		
+		                        GoblinRoom			
+		                        FindStickRoom			
+		                        EmptyCavePath			
+SkeletonRoom	FindSwordRoom	StartingRoom	EmptyCavePath	FindMopRoom	OrcRoom
+		                        EmptyCavePath			
+		                        EmptyCavePath			
+		                        FindGoldRoom			
