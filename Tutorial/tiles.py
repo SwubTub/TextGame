@@ -106,3 +106,11 @@ class FindSwordRoom(LootRoom):
         return """
         A shiny sword is lying in the middle of the room, you pick it up and add it to your inventory.
         """
+class FindGoldRoom(LootRoom):
+    def __init__(self, x, y, item):
+        super().__init__(x, y, items.Gold())
+
+    def intro_text(self):
+        return """
+        You spot a gold coin on the ground, you add it to your inventory.
+        """
