@@ -6,12 +6,12 @@ class Item():
         self.value = value
 
     def __str__(self):
-        return "{}\n=====\n{}\nValue: {}\n".format(self.name, self.description, self.value):
+        return "{}\n=====\n{}\nValue: {}\n".format(self.name, self.description, self.value)
 
 class Gold(Item):
     def __init__(self, amt):
         self.amt = amt
-        super().__init__(name = 'Gold'
+        super().__init__(name = 'Gold',
                          description = 'A round coin with [] stamped on the front.'.format(str(self.amt)),value=self.amt)
 
 class Weapon(Item):
@@ -24,21 +24,21 @@ class Weapon(Item):
 
 class Stick(Weapon):
     def __init__(self):
-        super().__init__(name = 'Stick'
-                         description = 'A stick'
-                         value = 0
-                         damage = 3):
+        super().__init__(name = 'Stick',
+                         description = 'A stick',
+                         value = 0,
+                         damage = 3)
 class Sword(Weapon):
     def __init__(self):
-        super().__init__(name = 'Sword'
-                         description = 'A sword with a fine point tip, a little rust is starting to form near the hilt'
-                         value = 5
+        super().__init__(name = 'Sword',
+                         description = 'A sword with a fine point tip, a little rust is starting to form near the hilt',
+                         value = 5,
                          damage = 7)
 class Mop(Weapon):
     def __init__(self):
-        super().__init__(name = 'Mop'
-                         description = 'A superior weapon used only by the most daring, brave warriors'
-                         value = 10
+        super().__init__(name = 'Mop',
+                         description = 'A superior weapon used only by the most daring, brave warriors',
+                         value = 10,
                          damage = 15)
 class Enemy:
     def __init__(self, name, hp, damage):

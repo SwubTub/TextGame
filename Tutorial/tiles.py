@@ -1,4 +1,4 @@
-import items, enemies
+import items
 
 class Maptile:
     def __init__(self, x, y):
@@ -30,7 +30,7 @@ class LootRoom(Maptile):
 class EnemyRoom(Maptile):
     def __init__(self, x, y, enemy):
         self.enemy = enemy
-        super()__init__(x, y)
+        super().__init__(x, y)
     def modify_player(self, the_player):
         if self.enemy.is_alive():
             the_player.hp = the_player.hp - self.enemy.damage
