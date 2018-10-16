@@ -1,4 +1,4 @@
-import sys
+import items, enemies, actions, world
 sys.path.append("..") # Adds higher directory to python modules path.
 
 class Player():
