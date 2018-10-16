@@ -1,4 +1,5 @@
-import items
+import sys
+sys.path.append("..") # Adds higher directory to python modules path.
 
 class Player():
     def __init__(self):
