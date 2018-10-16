@@ -1,4 +1,4 @@
-import world
+import world, actions, items, player, tiles
 from player import Player
 
 def play():
