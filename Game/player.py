@@ -76,18 +76,20 @@ import random #Note the new import!
 import items, world
  
 class Player:
- 
     def flee(self, tile):
         """Moves the player randomly to an adjacent tile"""
         available_moves = tile.adjacent_moves()
         r = random.randint(0, len(available_moves) - 1)
         self.do_action(available_moves[r])
 
-class Flee(Action):
-    def __init__(self, tile):
-        super().__init__(method=Player.flee, name="Flee", hotkey='f', tile=tile)
+class Maptile:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+def intro_text(self):
+    raise NotImplementedError()
 
-class EnemyRoom(MapTile):
+class EnemyRoom(Maptile):
     def __init__(self, x, y, enemy):
         self.enemy = enemy
         super().__init__(x, y)
