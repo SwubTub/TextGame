@@ -43,6 +43,15 @@ class EmptyCavePath(Maptile):
     def modify_player(self, player):
         #Room has no action on player#
         pass
+class LeaveCaveRoom(Maptile):
+    def intro_text(self):
+        return """
+        You feel a breeze and start to see light. As you get closer you realize it's sunlight. You escaped!
+
+        Well done
+        """
+    def modify_player(self, player):
+        player.victory = True
 class GoblinRoom(EnemyRoom):
     def __init__(self, x, y, enemy):
         super().__init__(x, y, enemies.Goblin())
